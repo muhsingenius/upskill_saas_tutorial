@@ -3,8 +3,9 @@
     <h1 class="text-center">Contact form</h1>
     
     <div class="col-md-4 col-md-offset-4">
+      <%= flash[:notice] %>
       <div class="well">
-        <%= form_for "/contacts" do |f| %>
+        <%= form_for @contact do |f| %>
         
           <div class="form-group">
             <%= f.label :name %>
@@ -15,8 +16,8 @@
             <%= f.text_field :email, class: 'form-control' %>
           </div>
           <div class="form-group">
-            <%= f.label :comment %>
-            <%= f.text_area :comment, class: 'form-control' %>
+            <%= f.label :comments %>
+            <%= f.text_area :comments, class: 'form-control' %>
           </div>
           <div class="form-group">
             <%= f.submit 'Submit', class: 'btn btn-default' %>
