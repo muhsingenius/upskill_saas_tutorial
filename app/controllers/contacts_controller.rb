@@ -1,9 +1,9 @@
 class ContactsController < ApplicationController 
   def new
-    @contact = Contact.new 
+    @contact = Contact.new  
   end
   
-  def create
+  def create    
     @contact = Contact.new(contact_params)
     if @contact.save
       redirect_to new_contact_path, notice: "Message saved"
@@ -13,9 +13,9 @@ class ContactsController < ApplicationController
   end
   
   
-  private 
+  private       
     def contact_params
-      params.require(:contact).permit(:name, :email, :comments)
+      params.require(:contact).permit(:name, :email, :comments)      
     end
 
 end
