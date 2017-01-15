@@ -1,0 +1,6 @@
+Memberships
+* User should see link for Basic plan from home page 
+* User should see link for Pro plan from home page
+
+* Basic plan link should point to regular Device sign up form
+* Pro plan link should point to a custom sign up form
