@@ -4,3 +4,13 @@ Memberships
 
 * Basic plan link should point to regular Device sign up form
 * Pro plan link should point to a custom sign up form
+
+Stripe integration
+* Users should have a stripe customer token in the users table
+* Javascript should prevent pro form from submitting when user fills it out and 
+  should card info to stripe and stripe will return with a card token
+* Javascript should send user fields and card token to rails app for validation
+   Rails app should validate the user fields. Rails app will note the plan used
+* Once validated, rails should send info (email, plan id) and card token to stripe
+    server and stripe will create a subscription and send a back customer token
+    Rails should save customer token and user info to database
